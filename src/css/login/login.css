@@ -1,0 +1,115 @@
+.login {
+    padding: 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login>.error {
+    user-select: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(255, 219, 219);
+    padding: 5px 10px;
+    border-radius: 10px;
+
+    animation: errorShake 2s ease-in-out infinite;
+}
+
+@keyframes errorShake {
+    0% {
+        transform: translateX(0);
+    }
+
+    5% {
+        transform: translateX(-8px);
+    }
+
+    10% {
+        transform: translateX(8px);
+    }
+
+    15% {
+        transform: translateX(-6px);
+    }
+
+    20% {
+        transform: translateX(6px);
+    }
+
+    25% {
+        transform: translateX(0);
+    }
+
+    /* Wait */
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.login>.prt1 {
+    max-width: 600px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-control:hover,
+.form-control:focus {
+    box-shadow: none !important;
+    border-color: #ced4da !important;
+    outline: none !important;
+}
+
+.login>.prt1>.inpdiv {
+    height: 50px;
+    background-color: rgba(240, 248, 255, 0);
+
+}
+
+.login>.prt1>.inpdiv>span {
+    background-color: rgba(240, 248, 255, 0.184);
+    color: white;
+}
+
+.login>.prt1>.extra {
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.login>.prt1>.extra>.opt {
+    align-self: flex-end;
+    user-select: none;
+    cursor: pointer;
+    padding-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(144, 190, 255);
+}
+.login>.prt1>.extra>.opt1{
+    color: white;
+} 
+
+.login>.prt1>.inpdiv>.inp {
+    color: rgb(255, 255, 255);
+    letter-spacing: .5px;
+    background-color: rgba(55, 55, 55, 0.135);
+}
+
+.login>.prt1>.inpdiv>.inp::placeholder {
+    color: rgb(181, 181, 181);
+}
+
+.login>.prt1>.bbtn {
+    overflow: hidden;
+    background-color: rgb(255, 60, 0);
+    padding: 10px 30px;
+    font-size: 20px;
+
+    border-radius: 10px;
+}
+
+.login>.prt1>.bbtn>span {
+    font-weight: 600;
+    background-color: inherit;
+    color: rgb(149, 211, 255)
+}

@@ -1,0 +1,58 @@
+.typ1{
+    background-color: rgb(253, 252, 252);
+    border:1px solid white;
+}
+
+.typ2{
+    background-color: rgb(255, 205, 205);
+    border:1px solid rgb(255, 205, 205);
+}
+
+.typ3{
+    background-color: rgb(224, 255, 205);
+    border:1px solid rgb(205, 255, 208);
+}
+
+.btn:hover{
+    border:1px solid white;
+}
+
+
+
+/* ----------------------- loading ----------------------- */
+.loadx{
+    transition: .5s ease;
+    padding-left:30px;
+    padding-right:30px;
+    padding:3px 25px;
+}
+.loadx > svg {
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    fill: rgb(0, 0, 0);
+    animation: loadSpin 1s linear infinite;
+}
+.loadx:hover > svg{
+     fill: rgb(250, 250, 250);
+}
+.loady{
+    border:none !important;
+}
+.loady > svg{
+    fill: rgb(250, 250, 250);
+    border:none;
+}
+
+@keyframes loadSpin {
+    0% {
+        transform: scale(0.7) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(.9) rotate(180deg);
+    }
+
+    100% {
+        transform: scale(0.7) rotate(360deg);
+    }
+}

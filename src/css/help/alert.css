@@ -1,0 +1,56 @@
+.alertu {
+    position: fixed;
+    left: 50%;
+    bottom: 110px;
+    transform: translateX(-50%);
+
+    width: max-content;
+    max-width: min(90%, 420px);
+    padding: 10px 17px;
+
+
+    border-radius: 12px;
+
+    color: #faf9f9;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(10px);
+
+
+    z-index: 9999;
+    animation: alertIn 0.4s ease-out;
+}
+
+.sux {
+    background: rgba(0, 226, 15, 0.96);
+
+}
+
+.erx {
+    background-color: red;
+}
+
+.wrx {
+    background-color: rgb(255, 123, 0);
+}
+
+@keyframes alertIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 15px);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translate(-50%, -15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}

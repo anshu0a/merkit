@@ -1,0 +1,72 @@
+.mainRegister {
+    background-color: bisque;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    color: white;
+    flex-direction: row;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    gap: 5px;
+
+}
+
+.mainRegister>.prt1 {
+    flex-direction: column;
+    width: 60%;
+    background: linear-gradient(0deg, rgb(3, 3, 3), rgba(75, 74, 74, 0.237));
+    border-radius: 20px;
+    min-height: 500px;
+    padding-top: 30px;
+}
+
+.mainRegister>.prt1 >.allready{
+    align-self: flex-start;
+    color: rgb(237, 237, 237);
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-weight: 500;
+}
+.mainRegister>.prt1 >.allready>u{
+    color:rgb(0, 145, 255);
+}
+.mainRegister>.prt1>.logo {
+    width: 40%;
+    max-width: 250px;
+
+}
+
+.mainRegister>.prt2 {
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+    width: 40%;
+    min-height: 500px;
+}
+
+.mainRegister>.prt2>.anmi {
+    width: 70%;
+    max-width: 400px;
+}
+
+.mainRegister>.prt2>p {
+    max-width: 320px;
+    color: rgb(193, 193, 193);
+}
+
+@media (max-width:900px) {
+    .mainRegister {
+        padding: 10px;
+    }
+
+    .mainRegister>.prt1 {
+         background: linear-gradient(0deg, rgb(3, 3, 3), rgba(75, 74, 74, 0));
+        width: 100%
+    }
+
+    .mainRegister>.prt2 {
+        display: none;
+    }
+
+}

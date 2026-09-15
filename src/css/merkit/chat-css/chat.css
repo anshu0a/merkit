@@ -1,0 +1,168 @@
+/* ---------------top  */
+
+.minTop {
+    z-index: 1;
+    margin:5px 40px  0 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+    gap: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 2px;
+    border-radius: 10px;
+}
+
+.lang {
+    border: 1px solid rgba(105, 104, 104, 0.53);
+    color: rgb(0, 0, 0);
+    gap: 5px;
+    padding: 8px 15px 8px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: .2s ease;
+    background-color: rgb(255, 255, 255);
+}
+
+.lang:hover {
+    scale: .85;
+}
+
+.nch {
+    border: 1px solid rgba(0, 123, 255, 0.53);
+    color: rgb(0, 153, 255);
+}
+
+.sch {
+    border: 1px solid rgba(0, 237, 20, 0.53);
+    color: rgb(0, 255, 26);
+}
+
+.erh {
+    border: 1px solid rgba(237, 0, 0, 0.53);
+    color: rgb(255, 21, 0);
+}
+
+.lang>svg {
+    width: 18px;
+    aspect-ratio: 1/1;
+}
+
+/* --------------------chat body */
+.chat {
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    gap: 10px;
+    overflow: hidden;
+    background-image: url("https://res.cloudinary.com/denrzaquu/image/upload/v1788991891/back_sitna0.jpg");
+
+}
+
+.chat>.chatbox {
+    max-width: 1400px;
+    height: calc(100vh - 110px);
+    width: 95%;
+    overflow-x: hidden;
+    justify-content: flex-start;
+    scroll-padding: 3px;
+    flex-direction: column;
+    padding: 100px 20px 150px 20px;
+    gap: 5px;
+}
+
+.chat>.chatbox>.loaderbtn {
+    background-color: #3c3c3c;
+    color: rgb(0, 106, 255);
+    border-radius: 5px;
+    padding: 8px 12px 8px 18px;
+    font-size: 10px;
+    transition: .2s ease;
+    letter-spacing: 1px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.chat>.chatbox>.loaderbtn:hover {
+    background-color: #0066ff;
+    color: rgb(39, 39, 39);
+    scale: 1.1;
+}
+
+.chat>.chatbox>.loaderbtn:active {
+    background-color: #0066ffbd;
+    scale: .9;
+}
+
+.chat>.chatbox>.join {
+    width: 100%;
+    padding: 10px 0;
+    flex-direction: column !important;
+    gap: 5px;
+    box-sizing: border-box;
+
+}
+
+.downBtn {
+    transform: rotateZ(180deg);
+    position: absolute;
+    bottom: 150px;
+    width: 35px;
+    z-index: 2;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: #0d6efd;
+    color: rgb(55, 55, 55);
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.682);
+    transition: .15s ease;
+    padding:6px;
+}
+
+.downBtn:hover {
+    scale: 1.1;
+}
+
+
+.chat>.chatbox::-webkit-scrollbar {
+    background: rgba(1, 1, 1, 0.172);
+    width: 7px;
+    border-radius: 10px;
+}
+
+.chat>.chatbox::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.929);
+    border-radius: 10px;
+}
+
+.sort {
+    padding:0 8px;
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: grey;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+}
+
+@media (max-width:600px) {
+    .chat {
+        height: calc(100vh - 60px);
+    }
+    .chat>.chatbox {
+    height: calc(100vh - 160px);
+    padding: 50px 10px 100px 10px;
+    }
+    .lang>span {
+        display: none;
+    }
+}

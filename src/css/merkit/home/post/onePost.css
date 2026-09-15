@@ -1,0 +1,63 @@
+.onePost {
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+    gap: 3px;
+    align-items: flex-start;
+    position: relative;
+}
+
+
+
+.onePost>.PostUerPic {
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: contain;
+    object-position: center;
+
+}
+
+.onePost>.dotx {
+    position: relative;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 3px solid rgba(46, 6, 71, 0.378);
+}
+
+.onePost>.dot1 {
+    left: 40px;
+    width: 8px;
+}
+
+.onePost>.dot2 {
+    left: 50px;
+    width: 12px;
+}
+
+
+.onePost>.postDiv {
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+    left: 50px;
+    width: calc(100% - 60px);
+    aspect-ratio: 1.8/1;
+    border-radius: 0 0  0 30px;
+    margin: 5px;
+    max-width: 600px;
+    justify-content: flex-end;
+}
+
+.onePost>.postDiv>.postImg {
+    width: 100%;
+    height: calc(100% - 30px);
+    bottom: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.onePost>.postDiv>.info{
+    background-color: aqua;
+
+}

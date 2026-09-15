@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+.isFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wd {
+  width: 100%;
+}
+
+.def {
+  color: rgb(204, 204, 204);
+  font-size: 12px;
+  font-weight: 500;
+  width: 70%;
+  text-align: center;
+  padding: 20px 10px;
+  max-width: 500px;
+}
+
+p,
+h2 {
+  margin: 0;
+}
+
+img,
+svg,
+br {
+  user-select: none;
+}
+
+.clk {
+  transition: .4s ease;
+  user-select: none;
+  cursor: pointer;
+
+}
+
+.clk:hover {
+  opacity: .85;
+}
+
+.clk:active {
+
+  scale: .9;
+  opacity: .75;
+
+}
+
+.clk2 {
+  transition: .4s ease;
+  user-select: none;
+  cursor: pointer;
+
+}
+
+.clk2:active {
+
+  scale: .9;
+
+}
+
+.errMsg {
+  color: rgb(237, 0, 0);
+  padding: 0 10px;
+  font-size: 13px;
+  font-weight: 500;
+  text-shadow: 0px 0px 20px rgb(8, 8, 8);
+}
+
+.errMsg::before {
+  content: "🟥 ";
+}
+
+.warnMsg {
+  color: rgb(237, 142, 0);
+  padding: 0 10px;
+  font-size: 13px;
+  font-weight: 500;
+  text-shadow: 0px 0px 20px rgb(8, 8, 8);
+}
+
+.warnMsg::before {
+  content: "📦 ";
+}
+
+.successMsg {
+  color: rgb(0, 184, 40);
+  padding: 0 10px;
+  font-size: 13px;
+  font-weight: 500;
+  text-shadow: 0px 0px 20px rgb(8, 8, 8);
+}
+
+.successMsg::before {
+  content: "🟩 ";
+}
+
+.redInp {
+  border: 1px solid red;
+}
+
+.flow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*📦 🟥🔴🟩 */

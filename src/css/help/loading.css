@@ -1,0 +1,35 @@
+.loading{
+    background:radial-gradient(100px, rgba(7, 7, 7, 0.135), rgba(255, 255, 255, 0.301));
+    position: absolute;
+    width: 100%;
+    z-index: 95;
+    height: 100vh;
+    flex-direction: column;
+}
+.loading > svg {
+    width: 60px;
+    aspect-ratio: 1/1;
+
+    transform-origin: center;
+    animation: loadingSpin 1s linear infinite;
+}
+
+@keyframes loadingSpin {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(.7);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.loading > p{
+    font-size: 15px;
+    font-weight: 600;
+    color: transparent;
+    background:linear-gradient(45deg , rgb(5, 5, 5) , rgb(134, 134, 134), rgb(5, 5, 5));
+    background-clip: text;
+}

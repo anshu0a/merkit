@@ -1,0 +1,189 @@
+.article {
+    background-color: rgb(254, 254, 254);
+    border: 1px solid rgb(235, 235, 235);
+    color: rgb(212, 212, 212);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 850px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.article>.displayBox {
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.article>.displayBox>.displayIng {
+    position: relative;
+    background-color: rgb(222, 222, 222);
+    width: 80px;
+    aspect-ratio: 1.4/1;
+    border-radius: 10px;
+
+}
+
+.article>.displayBox>.displayIng>.svgxx {
+    fill: white;
+    border: 3px solid white;
+    position: absolute;
+    right: -10%;
+    top: -10%;
+    border-radius: 50%;
+    padding: 2px;
+    background-color: rgb(64, 64, 64);
+    width: 25px;
+    aspect-ratio: 1/1;
+
+}
+
+.article>.displayBox>.displayIng>.imgxx {
+    width: 100%;
+    aspect-ratio: 1.4/1;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.article>h2 {
+    user-select: none;
+    margin: 5px 0 20px 0;
+}
+
+.article>.txt {
+    resize: none;
+    outline: none;
+    border: none;
+    max-height: 600px;
+    overflow: scroll;
+    overflow-x: hidden;
+    color: rgb(80, 80, 80);
+}
+
+.article>.ttl {
+    font-size: 25px;
+    color: rgb(22, 22, 22);
+    border-left: 2px solid rgb(232, 230, 230);
+}
+
+.article>.prtx {
+    margin-top: 15px;
+    flex-direction: row;
+    color: rgb(33, 32, 32);
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.article>.prtx>.insec {
+    gap: 5px;
+
+}
+
+.article>.prtx>.insec>.sec {
+    border-radius: 10px;
+    border: 1px solid rgb(227, 227, 227);
+    padding: 8px 15px;
+    gap: 5px;
+}
+
+.article>.prtx>.insec>.sec>.svgxx {
+    width: 25px;
+    aspect-ratio: 1/1;
+}
+
+.article>.prtx>.btnx {
+    color: aliceblue;
+    align-self: flex-end;
+    font-weight: 500;
+    background-color: rgb(0, 148, 247);
+    box-shadow: 0 0 5px 5px rgba(23, 23, 23, 0.079);
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+
+.article>.prtx>.btnx:active {
+    box-shadow: none;
+}
+
+.article>.tag {
+    align-self: flex-start;
+}
+
+.article>.tag>.sign {
+    color: rgb(0, 114, 235);
+    font-weight: 500;
+
+}
+
+.article>.tag>.hash {
+    background-color: rgba(250, 235, 215, 0);
+    width: 100%;
+    outline: none;
+    border: none;
+    color: rgb(0, 114, 235);
+}
+
+.article>.tag>.hash::placeholder {
+    color: rgb(189, 188, 188);
+}
+.publishTym {
+    margin: 14px 0 8px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.publishLabel {
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.publishTym .clkx {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    color: #2fd33f;
+    background: #f1fff4;
+    border: 1px solid #d7ffd6;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.publishTym .clkx:hover {
+    background: #e5ffed;
+    border-color: #beffcd;
+}
+
+.pubInpDiv {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 8px;
+    color: #777;
+    font-size: 13px;
+}
+
+.publishInp {
+    letter-spacing: 2px;
+    padding: 9px 12px;
+    border: none;
+    border-radius: 10px;
+    background: #f1f1f1;
+    color: #444;
+    font-size: 13px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+.publishInp:focus {
+    background: #e2e2e2;
+}

@@ -1,0 +1,32 @@
+.mainHome {
+    padding: 10px 5px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.mainHome>.navBlock {
+    position: sticky;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    top:0;
+    max-width: 1100px;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+.mainHome>.navBlock>.secx {
+    color: rgb(173, 172, 172);
+    padding: 10px 0;
+    font-weight: 500;
+    border-bottom: 1px solid rgb(213, 213, 213);
+    padding: 10px 20px;
+}
+
+.mainHome>.navBlock>.curx {
+    color: rgb(0, 0, 0) !important;
+    border-bottom: 1px solid black;
+}
+
+.mainHome>.navBlock>.secx:hover {
+    color: rgb(61, 61, 61);
+}

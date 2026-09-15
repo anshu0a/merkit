@@ -1,0 +1,48 @@
+import { Outlet } from "react-router-dom";
+import "../../css/merkit/mainMerkit.css";
+import OneTab from "./home/index/OneTab";
+import Index from "./home/index/Index";
+import { useRef } from "react";
+
+
+export default function MainMerkit() {
+  const path = window.location.pathname;
+  const resize = useRef();
+
+  const growSink = (x) => {
+    if (!x) resize.current.style.left = "0%";
+    else resize.current.style.left = "-100%";
+  }
+
+  return (
+    <div className="mainMerkit isFlex">
+      <div ref={resize} className="prt isFlex wd">
+        <div className="iconBox isFlex wd">
+          <svg onClick={() => growSink(true)} className="reSize clk" viewBox="0 -0.5 25 25"   >
+            <path d="M6.96967 16.4697C6.67678 16.7626 6.67678 17.2374 6.96967 17.5303C7.26256 17.8232 7.73744 17.8232 8.03033 17.5303L6.96967 16.4697ZM13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697L13.0303 12.5303ZM11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303L11.9697 11.4697ZM18.0303 7.53033C18.3232 7.23744 18.3232 6.76256 18.0303 6.46967C17.7374 6.17678 17.2626 6.17678 16.9697 6.46967L18.0303 7.53033ZM13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303L13.0303 11.4697ZM16.9697 17.5303C17.2626 17.8232 17.7374 17.8232 18.0303 17.5303C18.3232 17.2374 18.3232 16.7626 18.0303 16.4697L16.9697 17.5303ZM11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697L11.9697 12.5303ZM8.03033 6.46967C7.73744 6.17678 7.26256 6.17678 6.96967 6.46967C6.67678 6.76256 6.67678 7.23744 6.96967 7.53033L8.03033 6.46967ZM8.03033 17.5303L13.0303 12.5303L11.9697 11.4697L6.96967 16.4697L8.03033 17.5303ZM13.0303 12.5303L18.0303 7.53033L16.9697 6.46967L11.9697 11.4697L13.0303 12.5303ZM11.9697 12.5303L16.9697 17.5303L18.0303 16.4697L13.0303 11.4697L11.9697 12.5303ZM13.0303 11.4697L8.03033 6.46967L6.96967 7.53033L11.9697 12.5303L13.0303 11.4697Z" ></path>
+          </svg>
+          {/* ------------- fake -------------- */}
+          <img className="iconx icon1" src="/svg/icon.svg" />
+          <img className="iconx icon2" src="/svg/logo3.svg" />
+
+        </div>
+        <Index fun={growSink} />
+        <OneTab name="Login" link="/svg/user.svg" fn={() => console.log("hello")} />
+      </div>
+
+      <div className="prt2 wd">
+        <div className="topper isFlex wd">
+          <svg onClick={() => growSink(false)} className="reSize clk" viewBox="0 0 24 24">
+            <path d="M4 10H20M4 17H16" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"></path>
+          </svg>
+          <img className="logo" src="/svg/logo3.svg" />
+        </div>
+
+        <div style={!path.includes("/merkit/bot") ? { overflowY: "auto" } : {}} className="outletx wd">
+          <Outlet />
+        </div>
+      </div>
+
+    </div>
+  );
+}

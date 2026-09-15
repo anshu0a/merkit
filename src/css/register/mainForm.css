@@ -1,0 +1,117 @@
+.mainForm {
+    max-width: 800px;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+/* ---------------------------- name part ------------------------------- */
+
+.mainForm>.prt {
+    flex-direction: column;
+    gap: 15px;
+    max-width: 700px;
+}
+
+.mainForm>.prt>.btndiv {
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.prt>.inpdiv>.label {
+    background-color: transparent;
+}
+
+.prt>.inpdiv>.label>.svgg {
+    width: 30px;
+    aspect-ratio: 1/1;
+
+}
+
+.prt>.inpdiv>.inpp {
+    background-color: rgba(20, 20, 20, 0.88);
+    color: white;
+    height: 55px;
+
+}
+
+.prt>.inpdiv>.err {
+    border: 1px solid red;
+}
+
+.prt>.inpdiv>.inpp::placeholder {
+    color: grey;
+}
+
+/* ---------------------------- otp part ------------------------------- */
+
+.mainForm>.otpPrt {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 800px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.mainForm>.otpPrt>h1 {
+    margin: 0;
+}
+
+.mainForm>.otpPrt>p {
+    font-size: 16px;
+}
+
+.mainForm>.otpPrt>p>b {
+    font-size: 20px;
+    color: rgb(108, 133, 152);
+}
+
+.mainForm>.otpPrt>.bbtn {
+    background-color: rgb(81, 79, 79);
+    padding: 5px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.mainForm>.otpPrt>.btndiv {
+    justify-content: space-between;
+}
+
+.otpPrt .inpp {
+    letter-spacing: 2px;
+}
+
+.mainForm>.otpPrt .textArea>.resend {
+    color: rgb(72, 173, 255);
+    text-align: end;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.mainForm>.otpPrt .textArea>.resend {
+    color: rgb(195, 195, 195);
+}
+
+/* ----------------------------overview part ----------------------------------- */
+
+.overviewPrt>.titl {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.overviewPrt>.sec {
+    padding: 0px 10px;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+
+}
+
+.overviewPrt>.sec b {
+    color: rgb(231, 231, 231)
+}
+
+.overviewPrt>.sec i {
+    color: rgb(198, 198, 198)
+}

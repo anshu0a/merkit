@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reset Link Sent</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8fafc;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1f2937;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 440px;
+            padding: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 45px 42px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .icon {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #f0fdf4;
+            color: #15803d;
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        .title {
+            margin: 0;
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        .message {
+            margin: 12px 0 0;
+            font-size: 14px;
+            line-height: 22px;
+            color: #64748b;
+        }
+
+        .email {
+            margin-top: 18px;
+            padding: 12px 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 7px;
+            background: #f8fafc;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1f2937;
+            word-break: break-word;
+        }
+
+        .info {
+            margin-top: 20px;
+            font-size: 13px;
+            line-height: 20px;
+            color: #64748b;
+        }
+
+        .buttons {
+            margin-top: 25px;
+        }
+
+        .login-button,
+        .change-email-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 46px;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .login-button {
+            border: 1px solid #1f2937;
+            background: #1f2937;
+            color: #ffffff;
+        }
+
+        .login-button:hover {
+            background: #111827;
+        }
+
+        .change-email-button {
+            margin-top: 10px;
+            border: 1px solid #d7dce2;
+            background: #ffffff;
+            color: #374151;
+        }
+
+        .change-email-button:hover {
+            background: #f8fafc;
+            border-color: #b9c0c9;
+        }
+
+        .security-text {
+            margin-top: 24px;
+            padding-top: 18px;
+            border-top: 1px solid #edf0f2;
+            font-size: 12px;
+            line-height: 18px;
+            color: #89919c;
+        }
+
+        @media (max-width: 480px) {
+
+            .container {
+                padding: 15px;
+            }
+
+            .card {
+                padding: 35px 24px;
+            }
+
+            .title {
+                font-size: 24px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="card">
+
+            <div class="icon">
+                ✓
+            </div>
+
+            <h1 class="title">
+                Reset Link Sent
+            </h1>
+
+            <p class="message">
+                We have sent a password reset link to the Gmail address
+                associated with your account.
+            </p>
+
+            <div class="email" th:text="${email}">
+                haih@gmail.com
+            </div>
+
+            <p class="info">
+                Please check your <strong>Inbox</strong> for the reset email.
+                If you don't see it, please check your
+                <strong>Spam</strong>, <strong>Promotions</strong>,
+                or other folders.
+            </p>
+
+            <div class="buttons">
+
+
+                <a href="https://mail.google.com" target="_blank" class=" login-button">
+                    Check Email
+                </a>
+
+                <a th:href="${front + '/forgot'}" class="change-email-button">
+                    Change Email
+                </a>
+
+            </div>
+
+            <div class="security-text">
+                For your security, the password reset link is valid
+                for a limited time. If you did not request a password
+                reset, you can safely ignore this email.
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

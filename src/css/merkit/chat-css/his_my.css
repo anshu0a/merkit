@@ -1,0 +1,486 @@
+.glass {
+    user-select: none;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+.glass pre {
+    margin: 3px 0 !important;
+}
+
+
+/* =========================
+   HIS / AI MESSAGE
+========================= */
+
+.mainHis {
+    box-sizing: border-box;
+    width: 100% !important;
+    flex-direction: column;
+    padding: 10px 0;
+    max-width: 800px;
+}
+
+.mainHis>.his {
+    width: 95%;
+    letter-spacing: .5px;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.his * {
+    user-select: text !important;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    margin-top: 12px;
+    line-height: 2;
+    word-break: break-word;
+}
+
+.his p {
+width: 100%;
+margin: 18px 0;
+box-sizing: border-box;
+color: #444;
+background: #ffffff;
+font-size: 14px;
+line-height: 1.5;
+overflow-x: auto;
+white-space: pre-wrap;
+word-break: break-word;
+}
+
+.his p strong {
+color: #222;
+font-weight: 600;
+}
+
+.his p code {
+padding: 3px 6px;
+border-radius: 5px;
+background: #f1f2f4;
+color: #333;
+font-family: Consolas, Monaco, monospace;
+font-size: 13px;
+white-space: nowrap;
+}
+
+
+
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+.his h1,
+.his h2,
+.his h3,
+.his h4,
+.his h5,
+.his h6 {
+    color: rgb(23, 22, 22);
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 28px;
+}
+
+.his h1 {
+    font-size: 34px;
+}
+
+.his h2 {
+    font-size: 28px;
+}
+
+.his h3 {
+    font-size: 24px;
+}
+
+/* =========================
+   STRONG
+========================= */
+
+.his strong {
+    color: rgb(41, 39, 39);
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.his a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+.his a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   LIST
+========================= */
+
+.his ul,
+.his ol {
+    padding-left: 25px;
+}
+
+.his li {
+    color: #393b3d;
+}
+
+/* =========================
+   INLINE CODE
+========================= */
+
+
+.his pre {
+    background: #333333;
+    color: #9e9e9e !important;
+    padding: 4px 10px;
+    margin-top: 20px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-family:  "Fira Code", monospace;
+}
+
+.his pre::-webkit-scrollbar{
+    width:6px !important;
+    height: 6px !important;
+    background: rgba(255, 255, 255, 0) !important;
+}
+
+.his pre::-webkit-scrollbar-thumb{
+    width:6px !important;
+    height: 6px !important;
+    border-radius: 10px;
+    background: rgb(188, 188, 188);
+}
+
+/* =========================
+   BLOCKQUOTE
+========================= */
+
+.his blockquote {
+    padding: 16px 20px;
+    margin: 0 5px;
+    border-left: 4px solid #7c3aed;
+
+    background:
+        rgba(255, 255, 255, 0.03);
+
+    border-radius: 14px;
+
+    color: #d1d5db;
+}
+
+/* =========================
+   HORIZONTAL LINE
+========================= */
+
+.his hr {
+    border: none;
+    height: 1px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    margin: 28px 0;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.his table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-top: 20px;
+}
+
+.his th {
+    background: #1e293b;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+.his td {
+    background: #111827;
+    color: #d1d5db;
+    padding: 14px;
+    border-top:
+        1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.his img {
+    width: 100%;
+    border-radius: 18px;
+    margin-top: 20px;
+}
+
+/* =========================
+   CODE BOX
+========================= */
+
+.codeBox {
+    margin:0;
+    width: 100%;
+    flex-direction: column;
+    border-radius: 24px;
+    background: inherit;
+    justify-content: flex-start;
+   
+}
+
+/* =========================
+   CODE TOP
+========================= */
+
+.codeTop {
+    margin: 0 !important;
+    width: 100%;
+    height: auto !important;
+    justify-content: space-between;
+    padding: 0px 10px !important;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.519);
+}
+
+/* =========================
+   LANGUAGE
+========================= */
+
+.codeTop span {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* =========================
+   COPY BUTTON
+========================= */
+
+.cpy {
+    width: 35px;
+    aspect-ratio: 1/1;
+    padding: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cpy:hover {
+    transform: scale(1.08);
+    background: #5e5e5e;
+}
+
+.cpy:active {
+    transform: scale(0.9);
+}
+
+/* =========================
+   CODE PRE
+========================= */
+
+/* .codeBox pre {
+    margin: 0 !important;
+
+    background: #111111 !important;
+
+    padding: 28px !important;
+
+    overflow: auto !important;
+
+    max-height: 650px !important;
+} */
+
+/* =========================
+   CODE FONT
+========================= */
+
+.codeBox code {
+    font-size: 15px !important;
+    line-height: 32px !important;
+    font-family:
+        "Fira Code",
+        "JetBrains Mono",
+        monospace !important;
+        
+}
+
+.his code{
+    background-color: #373737 ;
+    color:rgb(250, 249, 249);
+    border-radius: 5px;
+    padding:5px 8px;
+    margin:0 5px;
+    
+
+}
+.codeBox * {
+    background-color: inherit !important;
+}
+
+.codeBox>div+div {
+    width: 100%;
+    max-height: 450px;
+    overflow: scroll !important;
+    overflow-x: scroll;
+    padding-right: 10px !important;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.codeBox>div+div::-webkit-scrollbar {
+    width: 8px !important;
+    height: 8px !important;
+}
+
+.codeBox>div+div::-webkit-scrollbar-track {
+    background: #4d131300;
+}
+
+.codeBox>div+div::-webkit-scrollbar-thumb {
+    background: #b2b2b2;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.codeBox>div+div::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+/* =========================
+   TEXT SELECTION
+========================= */
+
+.his pre::selection,
+.his pre *::selection {
+    background:rgba(255, 255, 255, 0.2);
+}
+
+/* =========================   MOBILE ======================== */
+
+@media(max-width:700px) {
+
+    .mainHis {
+        padding: 6px;
+    }
+
+    .mainHis>.his {
+        width: 100%;
+        padding: 14px;
+        border-radius: 20px;
+    }
+
+    .his h1 {
+        font-size: 28px;
+    }
+
+    .his h2 {
+        font-size: 24px;
+    }
+
+    .his h3 {
+        font-size: 20px;
+    }
+    .his li {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+
+
+    .codeBox code {
+        font-size: 13px !important;
+        line-height: 28px !important;
+    }
+
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+/* =========================
+   KEEP mainMy SAME
+========================= */
+
+.mainMy {
+    font-size: 16px;
+    align-self: flex-end;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 800px;
+    
+}
+
+.mainMy > .my {
+    border:1px solid rgb(147, 147, 147);
+    text-align: start;
+    max-width: 95%;
+    box-sizing: border-box;
+    padding: 6px 15px;
+    border-radius: 30px;
+
+    max-height: 600px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+
+    scroll-behavior: smooth;
+}
+
+/* code block horizontal scroll */
+.mainMy > .my pre {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+/* scrollbar
+.mainMy > .my::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.mainMy > .my::-webkit-scrollbar-track {
+    background: #09090927;
+    border-radius: 20px;
+}
+
+.mainMy > .my::-webkit-scrollbar-thumb {
+    background: #b2b2b2;
+    border-radius: 20px;
+}
+
+.mainMy > .my::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+} */
+
+.mainMy>.time {
+    text-align: end;
+    font-weight: 500;
+    font-size: 10px;
+}
+
+/* ================================ */

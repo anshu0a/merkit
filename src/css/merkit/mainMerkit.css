@@ -1,0 +1,163 @@
+.mainMerkit {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+}
+
+/* ---------------------------------- part 1 -------------------------- */
+.mainMerkit>.prt {
+    z-index: 2;
+    background-color: rgb(255, 255, 255);
+    border-right: 1px solid rgb(236, 236, 236);
+    transition: .2s ease;
+    max-width: 230px;
+    height: 100vh;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+
+}
+
+/* .mainMerkit>.prt::-webkit-scrollbar{
+    display: none;
+} */
+
+
+.mainMerkit>.prt>.iconBox {
+    flex-direction: row;
+    padding: 2px;
+}
+
+.mainMerkit>.prt>.iconBox>.reSize {
+    display: none;
+    cursor: e-resize;
+    background-color: rgba(31, 31, 31, 0);
+    transition: .4s ease;
+    fill: rgb(119, 118, 118);
+    width: 35px;
+    border-radius: 15%;
+    aspect-ratio: 1/1;
+}
+
+.mainMerkit>.prt>.iconBox>.reSize:hover {
+    fill: rgb(15, 15, 15);
+    scale: .9 !important;
+}
+
+
+.mainMerkit>.prt>.iconBox>.iconx {
+    width: 90%;
+    padding: 10px;
+
+}
+
+.mainMerkit>.prt>.iconBox>.icon1 {
+    display: none;
+}
+
+.mainMerkit>.prt>.iconBox>.icon2 {
+    width: 80%
+}
+
+/* ---------------------------------- part 2 -------------------------- */
+.prt2 {
+    width: calc(100% - 230px);
+}
+
+.prt2>.topper {
+    display: none;
+    justify-content: space-between;
+    padding: 15px 20px;
+    /* background-color: aliceblue; */
+    height: 60px;
+
+}
+
+.prt2>.topper>.reSize {
+    display: none;
+    cursor: e-resize;
+    width: 35px;
+    aspect-ratio: 1.2/1;
+    border-radius: 20%;
+}
+
+.prt2>.topper>.reSize>path {
+    stroke: rgb(129, 128, 128);
+}
+
+.prt2>.topper>.reSize:hover>path {
+    stroke: rgb(44, 44, 44);
+}
+
+.prt2>.topper>.logo {
+    width: 100px;
+}
+
+.prt2>.outletx {
+    width: 100%;
+    height: calc(100vh);
+    overflow-x: hidden;
+}
+
+
+
+/* ---------------------------------- mobile / tab -------------------- */
+
+@media (max-width:900px) {
+    .mainMerkit>.prt {
+        max-width: 80px;
+    }
+
+    .prt2 {
+        width: calc(100% - 80px);
+    }
+
+    .mainMerkit>.prt>.iconBox>.icon1 {
+        display: flex;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .mainMerkit>.prt>.iconBox>.icon2 {
+        display: none;
+    }
+}
+
+@media (max-width:600px) {
+
+    .mainMerkit>.prt {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        max-width: 230px;
+    }
+    .prt2 {
+        width: calc(100%);
+    }
+
+    .prt2>.topper {
+        display: flex;
+    }
+
+    .prt2>.topper>.reSize {
+        display: flex;
+    }
+
+    .mainMerkit>.prt>.iconBox {
+        justify-content: space-between;
+    }
+
+    .mainMerkit>.prt>.iconBox>.reSize {
+        display: flex;
+    }
+
+    .mainMerkit>.prt>.iconBox>.icon1 {
+        width: 50px;
+    }
+
+    .prt2>.outletx {
+        height: calc(100vh - 60px);
+    }
+
+}

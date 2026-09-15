@@ -1,0 +1,146 @@
+.mainForgot {
+    min-height: 100vh;
+    background-size: cover;
+    color: white;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 40px;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.mainForgot>.sec1 {
+    max-width: 700px;
+    border-radius: 20px;
+    flex-direction: column;
+    width: 100%;
+    min-height: 500px;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.mainForgot>.sec1>.title {
+    margin: 10px 0;
+}
+
+.sec1>.btndiv {
+    gap: 10px;
+    justify-content: flex-end;
+
+}
+
+.sec1>.change {
+    color: rgb(180, 210, 255);
+    font-size: small;
+    text-align: end;
+}
+
+.mainForgot>.sec1>.logo {
+    width: 100%;
+    max-width: 250px;
+}
+
+.mainForgot>.sec2 {
+    align-items: center;
+    width: 80%;
+    max-width: 400px;
+
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.sec1>.inp {
+    color: rgb(255, 255, 255);
+    letter-spacing: .5px;
+    height: 50px;
+    background-color: rgba(55, 55, 55, 0.135);
+}
+
+.sec1>.inp::placeholder {
+    color: rgb(181, 181, 181);
+}
+
+/* ------------------------- next page --------------------------------- */
+.nextPage {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+    width:100%;
+}
+
+.nextPage>.icon {
+    width: 45px;
+    aspect-ratio: 1/1;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f0fdf4;
+    color: #15803d;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.nextPage>.prt {
+    flex-direction: column;
+    gap:5px;
+    width:100%;
+    background-color: #15803c52;
+    border-radius: 10px;
+    padding: 20px 10px;
+    max-width: 460px;
+}
+
+.nextPage>.prt>.backfoot>.not {
+    color: rgb(93, 179, 255);
+    font-size: 13px;
+    font-weight: 500;
+}
+.nextPage>.prt>.login-button {
+    background-color: rgba(0, 0, 0, 0.884);
+    color: white;
+    border-radius: 7px;
+    font-weight: 600;
+    text-decoration: none;
+    width:80%;
+    padding:10px 20px ;
+    margin:5px;
+    transition: 0.2s;
+}
+
+.nextPage>.warn {
+    background-color: rgba(255, 193, 77, 0.5);
+
+    max-width: 510px;
+    font-size: 13px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+.nextPage>.more {
+    border-radius: 10px;
+    padding: 20px 0;
+    box-sizing: border-box;
+    font-size: 13px;
+    max-width: 450px;
+}
+
+
+@media (max-width:900px) {
+    .mainForgot {
+        padding: 10px 10px;
+    }
+
+    .mainForgot>.sec2 {
+        display: none;
+    }
+
+    .mainForgot>.sec1 {
+        background: none;
+    }
+}

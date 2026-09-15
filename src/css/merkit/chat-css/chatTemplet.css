@@ -1,0 +1,17 @@
+.chatTemplet {
+    text-align: center;
+    user-select: none;
+    z-index: -1;
+    position: absolute;
+    flex-direction: column;
+    color:rgb(93, 93, 93);
+}
+
+.chatTemplet>.chatBack {
+    opacity: .9;
+    width: 40%;
+    max-width: 300px;
+    border-radius: 15%;
+    aspect-ratio: 1/1;
+
+}
