@@ -13,6 +13,7 @@
     "@lottiefiles/dotlottie-react": "^0.19.13",
     "axios": "^1.19.0",
     "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
     "maplibre-gl": "^6.6.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",

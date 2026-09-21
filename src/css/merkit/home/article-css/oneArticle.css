@@ -25,6 +25,8 @@
     object-position: center;
     border-radius: 50%;
     background-color: rgb(214, 214, 214);
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .oneArticle>.flotBox>.usenm {

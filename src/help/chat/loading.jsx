@@ -1,4 +1,4 @@
-import '../../css/help/loading.css'
+import '../../css/help-css/loading.css'
 export default function Loading({msg}) {
     return (
         <div className="loading isFlex">

@@ -2,13 +2,25 @@ import { useState } from "react"
 import "../../../../css/merkit/home/article-css/oneArticle.css"
 import { getBorderColor } from "../../../../help/merkit/nav"
 import { timeAgo, checkTime } from "../../../../help/time"
+import { randomColor } from "../../../../help/merkit/nav"
 
 export default function OneArticle({ data }) {
     const [checkDate] = useState(checkTime(data.date));
+    const [extra, setExtra] = useState({ imgLoadError: false, color: randomColor() })
     return (
         <div style={{ borderLeft: `2px dashed ${getBorderColor()}` }} className="oneArticle isFlex wd">
             <div className="flotBox isFlex clk2">
-                <img src={data.userimg} alt={data.username} className="picMe" />
+                {!data.userimg || extra.imgLoadError ? (
+                    <div style={{ color: extra.color[0], backgroundColor: extra.color[1] }} className="picMe isFlex">
+                        {data.username?.charAt(0).toUpperCase()}
+                    </div>
+                ) : (
+                    <img src={data.userimg} alt={data.username} className="picMe"
+                        onError={() =>
+                            setExtra((pre) => ({ ...pre, imgLoadError: true }))
+                        }
+                    />
+                )}
                 <div className="usenm">{data.username}{checkDate != 0 && <span className={`${checkDate != 1 && "gunx"}`}></span>}</div>
             </div>
             <div className="prt1 isFlex">
@@ -19,22 +31,22 @@ export default function OneArticle({ data }) {
             </div>
             <div className="prt2 isFlex">
                 {
-                    data.imgs.map((srx, ind) => (
+                    data.imgs?.map((srx, ind) => (
                         <div key={ind} className="cvr">
-                            <img className="imgy" src={srx} />
+                            <img className="imgy" src={srx[1]} />
                         </div>
                     ))
                 }
             </div>
             <div className="btm wd isFlex">
                 <p className="hash clk">{data.hashtag}</p>
-                <div className="likes isFlex ">
+                {/* <div className="likes isFlex ">
                     {
                         data.emojie.map((one, ind) => (
                             <div key={ind} className="face">{one}</div>
                         ))
                     }
-                </div>
+                </div> */}
             </div>
             <div className="command isFlex wd">
                 <div className="opts">

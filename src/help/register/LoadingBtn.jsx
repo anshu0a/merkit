@@ -1,4 +1,4 @@
-import "../../css/help/btn.css"
+import "../../css/help-css/btn.css"
 
 export default function LoadingBtn({ typ,loadTyp }) {
     return (

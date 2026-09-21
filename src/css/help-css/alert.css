@@ -23,19 +23,20 @@
 
     z-index: 9999;
     animation: alertIn 0.4s ease-out;
+    background-color: rgb(42, 41, 41);
 }
 
 .sux {
-    background: rgba(0, 226, 15, 0.96);
+    background: rgba(0, 226, 15, 0.96) !important;
 
 }
 
 .erx {
-    background-color: red;
+    background-color: red !important;
 }
 
 .wrx {
-    background-color: rgb(255, 123, 0);
+    background-color: rgb(255, 123, 0) !important;
 }
 
 @keyframes alertIn {

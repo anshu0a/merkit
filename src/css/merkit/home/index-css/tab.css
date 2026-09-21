@@ -67,6 +67,7 @@
 
 .oneTab>.inTab>.current2 {
     stroke: rgb(0, 87, 186) !important;
+    fill:rgb(0, 87, 186) ;
 }
 
 .oneTab>.inTab>.tabIcon>path {

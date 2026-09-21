@@ -1,11 +1,15 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+import { useRef } from "react";
+
 import "../../css/merkit/mainMerkit.css";
+
 import OneTab from "./home/index/OneTab";
 import Index from "./home/index/Index";
-import { useRef } from "react";
 
 
 export default function MainMerkit() {
+  const navigate = useNavigate();
+
   const path = window.location.pathname;
   const resize = useRef();
 
@@ -27,7 +31,7 @@ export default function MainMerkit() {
 
         </div>
         <Index fun={growSink} />
-        <OneTab name="Login" link="/svg/user.svg" fn={() => console.log("hello")} />
+        <OneTab name="Login" fn1={growSink} fn2={ ()=>navigate("/login") } />
       </div>
 
       <div className="prt2 wd">

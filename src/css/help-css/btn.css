@@ -22,9 +22,7 @@
 /* ----------------------- loading ----------------------- */
 .loadx{
     transition: .5s ease;
-    padding-left:30px;
-    padding-right:30px;
-    padding:3px 25px;
+    padding:0px 25px;
 }
 .loadx > svg {
     width: 30px;

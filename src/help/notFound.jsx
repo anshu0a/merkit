@@ -1,4 +1,4 @@
-import '../css/help/notFound.css'
+import '../css/help-css/notFound.css'
 
 export default function NotFound() {
     return (

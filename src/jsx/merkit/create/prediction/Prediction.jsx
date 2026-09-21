@@ -10,11 +10,11 @@ export default function Prediction() {
             <p className="def">Write your prediction, lock it in time, and meet the future when the moment arrives.</p>
             <div className="prediction wd isFlex">
                 <div className="inpBoxx wd isFlex">
-                    <label htmlFor="prdict">What do you predict ? <sup>*</sup></label>
+                    <label htmlFor="predict">What do you predict ? <sup>*</sup></label>
                     <input className="inpText" type="text" id="predict" placeholder="Type Your Answer . . ." />
                 </div>
                 <div className="inpBoxx wd isFlex">
-                    <label htmlFor="prdict">Prediction Type</label>
+                    <label htmlFor="predictionType">Prediction Type</label>
                     <select className="inpText" defaultValue="random" id="predictionType" name="predictionType"   >
                         <option value="career">💼 Career</option>
                         <option value="love">🤞 Fun</option>
@@ -61,7 +61,7 @@ export default function Prediction() {
                     <input className="inpText" type="text" id="why" placeholder="Type Your Answer . . ." />
                 </div>
                 <div className="inpBoxx wd isFlex">
-                    <label htmlFor="why">Add Supporting Files</label>
+                    <label>Add Supporting Files</label>
                     <div className="disBox wd isFlex">
 
                     </div>
@@ -92,23 +92,23 @@ export default function Prediction() {
                     <div className="opts isFlex wd">
                         <div className="sec isFlex">
                             <label className="isFlex wd clk">
-                                <input type="radio" name="confidence" value="guess" />
+                                <input id="e1" type="radio" name="confidence" value="guess" />
                                 <span className="wd flow">😅 Guess</span>
                             </label>
 
                             <label className="isFlex wd clk">
-                                <input type="radio" name="confidence" value="maybe" />
+                                <input id="e2" type="radio" name="confidence" value="maybe" />
                                 <span className="wd flow">🤞 Maybe</span>
                             </label>
                         </div>
                         <div className="sec isFlex">
                             <label className="isFlex wd clk">
-                                <input type="radio" name="confidence" value="pretty-sure" />
+                                <input id="e3" type="radio" name="confidence" value="pretty-sure" />
                                 <span className="wd flow">😏 Sure</span>
                             </label>
 
                             <label className="isFlex wd clk">
-                                <input type="radio" name="confidence" value="certain" />
+                                <input id="e4" type="radio" name="confidence" value="certain" />
                                 <span className="wd flow">🎯 Certain</span>
                             </label>
                         </div>

@@ -126,6 +126,7 @@
 .article>.tag>.hash::placeholder {
     color: rgb(189, 188, 188);
 }
+
 .publishTym {
     margin: 14px 0 8px;
     color: #666;
@@ -161,10 +162,10 @@
 }
 
 .pubInpDiv {
-    display: flex;
-    align-items: center;
     justify-content: flex-start;
-    gap: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap:10px ;
     margin-top: 8px;
     color: #777;
     font-size: 13px;
@@ -186,4 +187,61 @@
 
 .publishInp:focus {
     background: #e2e2e2;
+}
+
+
+/* ---------------------------------article submit feedback --------------- */
+.outArticleBox {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    padding: 20px;
+
+}
+
+.outArticleBox>.articleSubmit {
+    overflow: hidden;
+    gap: 10px;
+    flex-direction: column;
+    border: 1px solid rgb(198, 255, 208);
+    background-color: rgb(249, 255, 250);
+    max-width: 550px;
+    padding: 20px 5px;
+    text-align: center;
+    border-radius: 20px;
+    width: 90%;
+}
+
+.outArticleBox>.errx {
+    border: 1px solid rgb(255, 198, 198);
+    background-color: rgb(255, 249, 249);
+}
+
+.outArticleBox>.articleSubmit>svg {
+    width: 50px;
+    aspect-ratio: 1/1;
+}
+
+.outArticleBox>.articleSubmit>p {
+    padding: 10px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 550px;
+    color: rgb(100, 100, 100)
+}
+
+.outArticleBox>.errx>p {
+    color: red
+}
+
+.outArticleBox>.articleSubmit>.btnxx {
+    border-radius: 10px;
+    padding: 8px 30px;
+    background-color: rgb(193, 254, 193);
+    color: green;
+}
+
+.outArticleBox>.errx>.btnxx {
+    background-color: rgb(255, 223, 223);
+    color: rgb(255, 0, 0);
 }

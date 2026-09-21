@@ -21,9 +21,11 @@ import Home from "../jsx/merkit/home/MainHome";
 import ArticleHome from "../jsx/merkit/home/article/ArticleHome";
 import Tranding from "../jsx/merkit/home/tranding/mainTreanding";
 import MainCapsule from "../jsx/merkit/home/prediction/MainCapsule";
+import MainWorks from "../jsx/merkit/works/MainWork";
 import PostList from "../jsx/merkit/home/post/PostList"
 // ---------create
 import Bot from "../jsx/merkit/chat/Chat"
+import Start from "./Start";
 
 function Ok() {
   return (<>
@@ -40,13 +42,14 @@ function Ok() {
 function Junction() {
   return (
     <Routes>
-      <Route path="/" element={<Ok />} />
+      <Route path="/" element={<Start/> } />
       <Route path="/login" element={<Login />} />
       <Route path="/forgot" element={<Forgot />} />
       <Route path="/register" element={<Register />} />
       <Route path="/profile" element={<Profile />} />
 
       <Route path="/merkit" element={<Merkit />}>
+      <Route path="works" element={<MainWorks />} />
         <Route path="bot/:chatid" element={<Bot />} />
 
         <Route path="home" element={<Home />}>

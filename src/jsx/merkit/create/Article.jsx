@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import "../../../css/merkit/create-css/article.css"
 import Alert from "../../../help/Alert"
 import api from "../../../help/api"
+import ArticleSubmitFeedback from "./ArticleSubmitFeedBack";
+import LoadingBtn from "../../../help/register/LoadingBtn";
 
 export default function Article() {
     const getCurrentDateTime = () => {
@@ -10,14 +12,13 @@ export default function Article() {
     };
 
     const [article, setArticle] = useState({
-        title: "",
-        text: "",
-        tag: "merkit",
-        showimg: [],
-        dateTime: getCurrentDateTime()
+        title: "", text: "",
+        tag: "merkit", showimg: [],
+        dateTime: getCurrentDateTime(), popMsg: "",
+        popTyp: true, popOn: false
     });
 
-    const [err, setErr] = useState({ msg: "", typ: "" });
+    const [err, setErr] = useState({ msg: "", typ: "", loading: false });
     const [publish, setPublish] = useState(true);
     const [minDateTime, setMinDateTime] = useState(getCurrentDateTime());
 
@@ -97,25 +98,23 @@ export default function Article() {
         formData.append("tag", article.tag);
         formData.append("publish", publish);
 
-        if (!publish) {
-            formData.append("publishTime", article.dateTime);
-        }
-
-        article.showimg.forEach(img => {
-            formData.append("images", img);
-        });
+        if (!publish) formData.append("publishTime", article.dateTime);
+        article.showimg.forEach(img => { formData.append("images", img); });
 
         try {
+            setErr((pre) => ({ ...pre, loading: true }))
             const result = await api.post("/article", formData);
-
-            console.log(result.data);
-            setErr({ msg: publish ? "Article published successfully." : "Article scheduled successfully.", typ: "sc" });
-            setArticle({ title: "", text: "", tag: "merkit", showimg: [], dateTime: getCurrentDateTime() });
+            const status = result.data.status;
+            setArticle((pre) => ({ ...pre, popOn: true, popMsg: result.data.message, popTyp: status == "BOTH_OK" }))
+            if (status == "BOTH_OK") setErr({ msg: publish ? "Article published successfully." : "Article scheduled successfully.", typ: (status == "BOTH_OK" ? "su" : "wr") });
             setPublish(true);
 
         } catch (error) {
             console.error(error);
+             console.error(error.message)
             setErr({ msg: error.response?.data?.message || "Failed to share article.", typ: "wr" });
+        } finally {
+            setErr((pre) => ({ ...pre, loading: false }))
         }
     };
 
@@ -150,7 +149,7 @@ export default function Article() {
                 <textarea
                     onChange={handleText}
                     rows={5}
-                    maxLength={500}
+                    maxLength={30000}
                     className="wd txt sub"
                     name="text"
                     placeholder="Start Writing from here . . ."
@@ -185,9 +184,8 @@ export default function Article() {
                 </p>
 
                 {!publish && (
-                    <div className="pubInpDiv wd">
-                        <span>Publish on</span>
-
+                    <div className="pubInpDiv isFlex wd">
+                        <div>Publish on</div>
                         <input
                             onChange={handleText}
                             type="datetime-local"
@@ -222,12 +220,18 @@ export default function Article() {
                         )}
                     </div>
 
-                    <div onClick={sharePost} className="btnx clk dis">
-                        Share Post
+                    <div onClick={!err.loading ? sharePost : undefined} className="btnx clk dis">
+                        {
+                            !err.loading ?
+                                "Share Article"
+                                :
+                                <LoadingBtn loadTyp={1} />
+                        }
                     </div>
+
                 </div>
             </div>
-
+            {article.popOn && <ArticleSubmitFeedback typ={article.popTyp} msg={article.popMsg} setArticle={setArticle} />}
             <Alert msg={err.msg} typ={err.typ} setMsg={setErr} />
         </>
     );

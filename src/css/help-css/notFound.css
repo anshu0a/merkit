@@ -3,12 +3,12 @@
     top:0;
     left:0;
     z-index: 999;
-    color:white !important;
+    color:rgb(75, 74, 74) !important;
     text-align: center;
     flex-direction: column;
     gap:5px;
     min-height: 100vh;
-    background:linear-gradient(0deg , rgb(25, 25, 25),rgb(87, 87, 87))
+    background:linear-gradient(0deg , rgba(25, 25, 25, 0.081),rgba(87, 87, 87, 0))
 }
 
 .notfound>img{
@@ -24,13 +24,12 @@
     flex-wrap: wrap;
     gap:20px;
     width:100%;
-    overflow: hidden;
 }
 .btn-home{
     display: inline-block;
     padding: 9px 40px;
     background: #0d6efd;
-    color: white;
+    color: rgb(254, 254, 254);
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
@@ -44,6 +43,6 @@
 }
 .notfound>p{
     font-size: 13px;
-    color: rgb(158, 158, 158);
+    color: rgb(105, 97, 97);
     font-weight: 500;
 }

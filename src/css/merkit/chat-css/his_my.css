@@ -1,8 +1,10 @@
-.glass {
+/* .glass {
     user-select: none;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-}
+} */
+
+/* this is in index.css */
 .glass pre {
     margin: 3px 0 !important;
 }

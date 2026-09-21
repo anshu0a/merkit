@@ -14,7 +14,7 @@ const border = [
 ];
 
 
-const randomColor = colors[Math.floor(Math.random() * colors.length)];
+const randomColor = () => colors[Math.floor(Math.random() * colors.length)];
 
 export const getBorderColor = () => {
     return border[Math.floor(Math.random() * border.length)];

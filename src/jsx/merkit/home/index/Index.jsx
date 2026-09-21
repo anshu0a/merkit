@@ -8,12 +8,13 @@ export default function Index({ fun }) {
 
     return (
         <div className="indexx isFlex">
-            <OneTab name="Home" fn={() => { fun(true); navigate("/merkit/home"); }} />
-            <OneTab name="Explore" fn={() => { fun(true); navigate("/merkit/explore"); }} />
-            <OneTab name="Create" fn={() => { fun(true); navigate("/merkit/create"); }} />
-            <OneTab name="Bot" fn={() => { fun(true); navigate("/merkit/bot/new"); }} />
-            <OneTab name="Notifications" fn={() => { fun(true); navigate("/merkit/notification"); }} />
-            <OneTab name="More" fn={() => { }} />
+            <OneTab name="Home" fn1={fun} fn2={() => navigate("/merkit/home")} />
+            <OneTab name="Explore" fn1={fun} fn2={() => navigate("/merkit/explore")} />
+            <OneTab name="Create" fn1={fun} fn2={() => navigate("/merkit/create")} />
+            <OneTab name="Bot" fn1={fun} fn2={() => navigate("/merkit/bot/new")} />
+            <OneTab name="Notifications" fn1={fun} fn2={() => navigate("/merkit/notification")} />
+            <OneTab name="Works" fn1={fun} fn2={() => navigate("/merkit/works")} />
+            <OneTab name="More" fn1={fun} fn2={() => { }} />
         </div>
     );
 }

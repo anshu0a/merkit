@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../css/help/alert.css";
+import "../css/help-css/alert.css";
 //                               su - er - wr
 export default function Alert({ msg, typ, setMsg }) {
 
@@ -13,6 +13,8 @@ export default function Alert({ msg, typ, setMsg }) {
     }, [msg]);
 
     return (
-        msg != "" && <div className={`alertu ${typ}x`}>  {msg}   </div>
+        <>
+            {msg != "" && <div className={`alertu ${typ}x`}>  {msg} </div>}
+        </>
     );
 }
