@@ -1,3 +1,151 @@
-.mainCapsule{
-    background-color: aqua;
+.mainCapsule {
+    padding: 10px 0 20px 0;
+    flex-direction: column;
+}
+
+
+/* ------------------------ all capsule -----------------------------------------*/
+
+.allCapsule {
+    flex-direction: column;
+    gap: 5px;
+    max-width: 1120px;
+}
+
+/* ------------------------ one capsule ---------------------------------------------*/
+
+.oneCapsule {
+    flex-direction: column;
+    /* max-width: 870px; */
+}
+
+.sect {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.sect>.picu {
+    position: relative;
+    aspect-ratio: 16/9;
+    width: 100%;
+    max-width: 560px;
+
+}
+
+.sect>.picu>img {
+    filter: brightness(.9);
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+}
+
+
+
+.sect>.picu>.ttl {
+    max-width: calc(100% - 10px);
+    position: absolute;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    margin: 5px;
+    bottom: 0;
+    background-color: rgba(4, 4, 4, 0.371);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sect>.picu>.usext {
+    max-width: calc(100% - 10px);
+    position: absolute;
+    padding: 6px 10px;
+    flex-direction: row;
+    gap: 5px;
+    top: 0;
+    margin: 5px;
+    color: white;
+    background-color: rgba(4, 4, 4, 0.371);
+    border: 1px solid rgba(255, 255, 255, 0.175);
+    border-radius: 10px;
+
+}
+
+.sect>.picu>.usext>.nming {
+    box-sizing: border-box;
+    max-width: calc(100% - 20px);
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.sect>.picu>.usext>.nming>.useu {
+    width: 100%;
+
+}
+
+.sect>.picu>.usext>.nming>.locu {
+    color: rgb(230, 230, 230);
+    width: 100%;
+    font-weight: 500;
+    font-size: 12px;
+
+}
+
+.sect>.picu>.usext>img {
+    width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+
+}
+
+.sect>.infou {
+    width: calc(100% - 610px);
+    min-width: 300px;
+    max-width: 560px;
+
+}
+
+.sect>.infou>.ttlu {
+    font-size: 22px;
+
+}
+
+.sect>.infou>.decx {
+    color: rgb(86, 86, 86);
+    white-space: pre-wrap;
+}
+
+.sect>.infou>.decx>i {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(0, 128, 255);
+    display: block;
+    text-align: right;
+
+}
+
+.sect2 {
+    background-color: green;
+    max-width: 560px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    margin-left: 22px;
+}
+
+
+
+@media (max-width:1200px) {
+    
+
+    .sect>.infou {
+        width: calc(100%);
+
+    }
+
+    .sect2 {
+        margin-left: 0;
+        align-self: center;
+    }
+
 }

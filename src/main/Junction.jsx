@@ -20,7 +20,7 @@ import Prediction from "../jsx/merkit/create/prediction/Prediction";
 import Home from "../jsx/merkit/home/MainHome";
 import ArticleHome from "../jsx/merkit/home/article/ArticleHome";
 import Tranding from "../jsx/merkit/home/tranding/mainTreanding";
-import MainCapsule from "../jsx/merkit/home/prediction/MainCapsule";
+import MainCapsule from "../jsx/merkit/home/capsule/MainCapsule";
 import MainWorks from "../jsx/merkit/works/MainWork";
 import PostList from "../jsx/merkit/home/post/PostList"
 // ---------create

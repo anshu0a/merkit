@@ -24,7 +24,6 @@ a{
   padding: 20px 10px;
   max-width: 500px;
 }
-
 p,
 h2 {
   margin: 0;
@@ -119,4 +118,10 @@ br {
     user-select: none;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
+}
+
+
+.img{
+  object-fit: cover;
+  object-position: center;
 }

@@ -2,7 +2,7 @@ import "../../../css/merkit/create-css/article.css"
 
 export default function ArticleSubmitFeedback({ typ, msg, setArticle }) {
     const getCurrentDateTime = () => {
-        const now = new Date();
+        const now = new Date(); 
         return new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 16);
     };
 
